@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-color: rgb(37, 9, 37);
+    background-color:rgb(0, 30, 255);
     color: white;
     height: 65px;
     font-size: 27px;
@@ -41,10 +41,12 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:yellow;
 }
 
 .box:hover{
-    background-color: rgb(242, 234, 250);
+    background-color:papayawhip;
+    color:black
 }
 
 .info {
@@ -65,23 +67,9 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
-.br-0{
-    border-right: 0;
-}
 
-.bl-0{
-    border-left: 0;
-}
 
-.bt-0{
-    border-top: 0;
-}
-
-.bb-0{
-    border-bottom: 0;
-}
-
-#reset {
+#play_again {
     margin: 0 23px;
     padding: 1px 18px;
     background: #f3e7f9;
@@ -101,7 +89,7 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
-@media screen and (max-width: 950px)
+@media screen and ( max-width: 360px)
 {
     .gameContainer{
         flex-wrap: wrap;
@@ -115,6 +103,15 @@ nav ul{
     .container { 
         grid-template-rows: repeat(3, 20vw);
         grid-template-columns: repeat(3, 20vw);
+    }
+    .line{
+        background-color: black;
+        height: 3px;
+        width: 0;
+        position: absolute;
+        background-color: #911d91;
+        transition: width 1s ease-in-out
+
     }
 }
 span{
