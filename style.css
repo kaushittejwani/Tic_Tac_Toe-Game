@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
 *{
     margin: 0;
@@ -43,11 +44,11 @@ nav ul{
     align-items: center;
     background-color:yellow;
 }
-
 .box:hover{
-    background-color:papayawhip;
-    color:black
+    background-color: powderblue;
 }
+
+
 
 .info {
     font-size: 22px;
@@ -66,6 +67,10 @@ nav ul{
     width: 0;
     transition: width 1s ease-in-out;
 }
+.backhroung-color{
+    background-color: yellow;
+}
+
 
 
 
@@ -89,11 +94,12 @@ nav ul{
     transition: width 1s ease-in-out;
 }
 
-@media screen and ( max-width: 600px)
+@media screen and ( max-width:600px)
 {
-    .gameContainer{
-        flex-wrap: wrap;
-    }
+    .gameContainer
+        {
+            flex-wrap:wrap;
+        }
     .gameInfo{
         margin-top: 34px;
     }
@@ -104,15 +110,9 @@ nav ul{
         grid-template-rows: repeat(3, 20vw);
         grid-template-columns: repeat(3, 20vw);
     }
-    .line{
-        background-color: black;
-        height: 3px;
-        width: 0;
-        position: absolute;
-        background-color: #911d91;
-        transition: width 1s ease-in-out
-
-    }
+    
+    
+    
 }
 span{
     display: inline-block;
@@ -120,3 +120,13 @@ span{
     margin-left:10px;
 
 }
+/*@media screen and(max-width:400px){
+    .line{
+
+            transform: translate(0vw, 25vw) rotate(
+    45deg
+    );
+        width: 56vw;
+    }
+    
+}*/
