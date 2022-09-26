@@ -59,10 +59,7 @@ const checkWin = () => {
 
               }, 2000);
             }
-            if(boxtext[e[0].innerText]===boxText[e[1]].innerText &&  boxtext[e[2]].innerText !== boxtext[e[1]].innerText &&
-              boxtext[e[0]].innerText !== ""){
-                document.querySelector('.info').style.innerText="Game is over";
-              }
+            
             }
             
            
