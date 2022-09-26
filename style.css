@@ -32,7 +32,6 @@ nav ul{
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
     font-family: 'Roboto', sans-serif;
-    position: relative;
 }
 
 .box{
@@ -42,11 +41,25 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:yellow;
+    background-color:powderblue;
+    
 }
 .box:hover{
     background-color: powderblue;
 }
+.br-0{
+    border-right: 0px;
+   }
+   .bl-0{
+      border-left: 0px;
+   }
+   .bb-0{
+      border-bottom:0px;
+   }
+   .bt-0{
+     border-top: 0px;
+   }
+
 
 
 
@@ -83,6 +96,7 @@ nav ul{
     font-family: 'Baloo Bhaina 2';
     font-size: 15px;
     font-weight: bolder;
+
 }
 
 .line{
@@ -92,6 +106,7 @@ nav ul{
     position: absolute;
     background-color: #911d91;
     transition: width 1s ease-in-out;
+    position:absolute
 }
 
 @media screen and ( max-width:600px)
@@ -111,8 +126,9 @@ nav ul{
         grid-template-columns: repeat(3, 20vw);
     }
     
-    
-    
+      .line{
+        width:0 !important;
+      } 
 }
 span{
     display: inline-block;
@@ -120,13 +136,3 @@ span{
     margin-left:10px;
 
 }
-/*@media screen and(max-width:400px){
-    .line{
-
-            transform: translate(0vw, 25vw) rotate(
-    45deg
-    );
-        width: 56vw;
-    }
-    
-}*/
