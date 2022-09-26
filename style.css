@@ -46,6 +46,9 @@ nav ul{
 .box:hover{
     background-color: powderblue;
 }
+.boxtext{
+    font-family:cursive;
+}
 .br-0{
     border-right: 0px;
    }
