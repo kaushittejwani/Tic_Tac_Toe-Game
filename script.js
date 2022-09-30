@@ -7,6 +7,7 @@ let isgameover = false;
 let scoreX = 0;
 let scoreY = 0;
 let Ele_Player=document.getElementsByClassName('boxtext').innerText;
+let count=0;
 
 // Function to change the turn
 const changeTurn = () => {
@@ -87,11 +88,18 @@ Array.from(boxes).forEach((element) => {
         turn = changeTurn();
 
         audioTurn.play();
+        count++;
 
         checkWin();
         if (!isgameover) {
           document.getElementsByClassName("info")[0].innerText =
             "Turn for " + turn;
+        }
+        if(count==9 && isgameover!=true){
+           document.getElementsByClassName('info')[0].innerText="its a draw";
+           document.getElementsByClassName('info')[0].style.color="black";
+
+
         }
         if (turn == "X") {
       boxtext.style.color = "red";
