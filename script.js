@@ -6,8 +6,8 @@ let turn = "X";
 let isgameover = false;
 let scoreX = 0;
 let scoreY = 0;
-let Ele_Player=document.getElementsByClassName('boxtext').innerText;
 let count=0;
+let Ele_Player=document.getElementsByClassName('boxtext').innerText;
 
 // Function to change the turn
 const changeTurn = () => {
@@ -18,14 +18,14 @@ const changeTurn = () => {
 const checkWin = () => {
   let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
-   [0, 1, 2, 9, 7, 0, 1.2],
-        [3, 4, 5, 9, 22, 0, 1.2],
-        [6, 7, 8, 9, 37, 0, 1.2],
-        [0, 3, 6, -6,22,90, 1.2],
-        [1, 4, 7, 9,22,90, 1.2],
-        [2, 5, 8, 24,22,90, 1.2],
-        [0, 4, 8, 9,22,45, 1.2],
-        [2, 4, 6,9,22,135, 1.2],
+    [0, 1, 2, 3, 5, 0, 1.2],
+    [3, 4, 5, 3, 15, 0, 1.2],
+    [6, 7, 8, 3, 25, 0, 1.2],
+    [0, 3, 6, -3, 15, 90,1.2],
+    [1, 4, 7, 3, 15, 90, 1.2],
+    [2, 5, 8, 3, 15, 90, 1.2],
+    [0, 4, 8, 3, 15, 45, 1.2],
+    [2, 4, 6, 3, 15, 135, 1.2]
   ];
   wins.forEach((e) => {
     if (
@@ -38,7 +38,7 @@ const checkWin = () => {
       isgameover = true;
       document
         .querySelector(".imgbox")
-        .getElementsByTagName("img")[0].style.width = "200px";
+        .getElementsByTagName("img")[0].style.width = "150px";
       document.querySelector(
         ".line"
       ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg) scale(${e[6]})`;
@@ -50,18 +50,27 @@ const checkWin = () => {
 
       document.querySelector(".line").style.width = "26vw";
      
+    
+        if(boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
+          boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
+          boxtext[e[0]].innerText !== ""
+        ) {
+          setTimeout(() => {
+              
+            window.location.reload();
 
-          if( boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
-            boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
-            boxtext[e[0]].innerText !== ""){
-              setTimeout(() => {
-                                            
-                window.location.reload();
-
-              }, 2000);
-            }
+          }, 2000);
+      }
+          
+                          
+         
+          }
+          console.log(count);
+         
             
-            }
+            
+         
+           
             
            
             
@@ -94,13 +103,22 @@ Array.from(boxes).forEach((element) => {
         if (!isgameover) {
           document.getElementsByClassName("info")[0].innerText =
             "Turn for " + turn;
+            console.log('turn called');
         }
-        if(count==9 && isgameover!=true){
-           document.getElementsByClassName('info')[0].innerText="its a draw";
-           document.getElementsByClassName('info')[0].style.color="black";
+          
 
+        if(count==9 && 
+          isgameover!=true){
+            document.getElementsByClassName('info')[0].innerText="its a draw";
 
-        }
+          document.getElementsByClassName('info')[0].style.color="black";
+          }
+        
+    
+      
+       
+        
+
         if (turn == "X") {
       boxtext.style.color = "red";
       Ele_Player.style.color = "red";
@@ -114,11 +132,13 @@ Array.from(boxes).forEach((element) => {
         
       }
     }
-   
+      
+        
     
    
   });
 });
+    
 
 
 // Add onclick listener to reset button
@@ -135,7 +155,3 @@ play_again.addEventListener("click", () => {
   document.querySelector(".imgbox").getElementsByTagName("img")[0].style.width =
     "0px";
 });
-const myfunc = () => {
-  var element = document.getElementsByClassName("box");
-  element.classList.toggle("my-style");
-};
