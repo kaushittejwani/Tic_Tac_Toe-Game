@@ -105,15 +105,21 @@ Array.from(boxes).forEach((element) => {
             "Turn for " + turn;
             console.log('turn called');
         }
+
+           
+    if (count==9 && isgameover != true) 
+    {
+      console.log("successful");
+        document.getElementsByClassName("info")[0].style.color = `red`;
+      document.getElementsByClassName("info")[0].innerText = `Game Is Over.. `;
+    
+
+    
+        
+      }
+
           
 
-        if(count==9 && 
-          isgameover!=true){
-            document.getElementsByClassName('info')[0].innerText="its a draw";
-
-          document.getElementsByClassName('info')[0].style.color="black";
-          }
-        
     
       
        
@@ -129,10 +135,9 @@ Array.from(boxes).forEach((element) => {
       Ele_Player.style.color = "blue";
 
     }
-        
-      }
+   
     }
-      
+  }
         
     
    
