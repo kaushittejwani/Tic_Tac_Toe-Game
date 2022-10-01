@@ -1,31 +1,13 @@
-console.log("Welcome to Tic Tac Toe");
-let music = new Audio("music.mp3");
-let audioTurn = new Audio("ting.mp3");
-let gameover = new Audio("gameover.mp3");
-let turn = "X";
-let isgameover = false;
-let scoreX = 0;
-let scoreY = 0;
-let count=0;
-let Ele_Player=document.getElementsByClassName('boxtext').innerText;
-
-// Function to change the turn
-const changeTurn = () => {
-  return turn === "X" ? "0" : "X";
-};
-
-// Function to check for a win
-const checkWin = () => {
-  let boxtext = document.getElementsByClassName("boxtext");
+let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
     [0, 1, 2, 5, 5, 0],
         [3, 4, 5, 5, 15, 0],
         [6, 7, 8, 5, 25, 0],
-        [0, 3, 6, -5, 15, 90],
-        [1, 4, 7, 5, 15, 90],
-        [2, 5, 8, 15, 15, 90],
-        [0, 4, 8, 5, 15, 45],
-        [2, 4, 6, 5, 15, 135],
+        [0, 3, 6, -7, 15, 90],
+        [1, 4, 7, 3, 15, 90],
+        [2, 5, 8, 13, 15, 90],
+        [0, 4, 8, 3, 16, 45],
+        [2, 4, 6, 3, 15, 135],
   ];
   wins.forEach((e) => {
     if (
@@ -51,7 +33,7 @@ const checkWin = () => {
       document.querySelector(".line").style.width = "26vw";
      
     
-        if(boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
+      /* if(boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
           boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
           boxtext[e[0]].innerText !== ""
         ) {
@@ -60,7 +42,7 @@ const checkWin = () => {
             window.location.reload();
 
           }, 2000);
-      }
+      }*/
           
                           
          
