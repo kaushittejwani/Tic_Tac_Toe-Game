@@ -1,4 +1,22 @@
-let boxtext = document.getElementsByClassName("boxtext");
+console.log("Welcome to Tic Tac Toe");
+let music = new Audio("music.mp3");
+let audioTurn = new Audio("ting.mp3");
+let gameover = new Audio("gameover.mp3");
+let turn = "X";
+let isgameover = false;
+let scoreX = 0;
+let scoreY = 0;
+let count=0;
+let Ele_Player=document.getElementsByClassName('boxtext').innerText;
+
+// Function to change the turn
+const changeTurn = () => {
+  return turn === "X" ? "0" : "X";
+};
+
+// Function to check for a win
+const checkWin = () => {
+  let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
     [0, 1, 2, 5, 5, 0],
         [3, 4, 5, 5, 15, 0],
@@ -33,7 +51,7 @@ let boxtext = document.getElementsByClassName("boxtext");
       document.querySelector(".line").style.width = "26vw";
      
     
-      /* if(boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
+      if(boxtext[e[0]].innerText === boxtext[e[1]].innerText &&
           boxtext[e[2]].innerText === boxtext[e[1]].innerText &&
           boxtext[e[0]].innerText !== ""
         ) {
@@ -42,7 +60,7 @@ let boxtext = document.getElementsByClassName("boxtext");
             window.location.reload();
 
           }, 2000);
-      }*/
+      }
           
                           
          
