@@ -18,14 +18,14 @@ const changeTurn = () => {
 const checkWin = () => {
   let boxtext = document.getElementsByClassName("boxtext");
   let wins = [
-    [0, 1, 2, 2, 5,0],
-    [3, 4, 5, 3, 15, 0],
-    [6, 7, 8, 3, 25, 0],
-    [0, 3, 6, -8, 14, 90],
-    [1, 4, 7, 2, 14, 90],
-    [2, 5, 8, 13, 14, 90],
-    [0, 4, 8, 4, 16, 45],
-    [2, 4, 6, 3, 15, 135],
+   [0, 1, 2, 9, 7, 0, 1.2],
+        [3, 4, 5, 9, 22, 0, 1.2],
+        [6, 7, 8, 9, 37, 0, 1.2],
+        [0, 3, 6, -6,22,90, 1.2],
+        [1, 4, 7, 9,22,90, 1.2],
+        [2, 5, 8, 24,22,90, 1.2],
+        [0, 4, 8, 9,22,45, 1.2],
+        [2, 4, 6,9,22,135, 1.2],
   ];
   wins.forEach((e) => {
     if (
@@ -41,7 +41,7 @@ const checkWin = () => {
         .getElementsByTagName("img")[0].style.width = "200px";
       document.querySelector(
         ".line"
-      ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
+      ).style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg) scale(${e[6]})`;
 
       //responsive design
 
